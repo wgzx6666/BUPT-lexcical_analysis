@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[14];
+	int n=0,k=0;
+	scanf("%s",a);
+	for(int i=0;i<12;i++)
+	{
+		if(a[i]>47&&a[i]<58)
+		{
+			k++;
+			n=n+(a[i]-'0')*k;
+		}
+	}
+	if(n%11==(a[12]-'0')||n%11==10&&a[12]=='X')
+	{
+	    printf("Right");
+	    return 0;
+	}
+	else
+	{
+		a[12]=0;
+	    printf("%s",a);
+	    if(n%11==10)
+	    {
+	    printf("X");
+	    }
+	    else
+ 	    {
+	    printf("%d",n%11);
+	    }
+	} 
+	return 0;
+}

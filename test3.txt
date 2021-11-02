@@ -1,0 +1,16 @@
+#include<stdio.h>
+/*递推算法*/
+int main()
+{
+	int n,a[501],k;
+	scanf("%d",&n);
+	k=n/2;
+	a[0]=1;
+	a[1]=2;
+	for(int i=1;i<=k;i++)
+	{ 
+		a[i]=a[i-1]+a[i/2];
+	}
+	printf("%d",a[k]);
+	return 0;
+}
